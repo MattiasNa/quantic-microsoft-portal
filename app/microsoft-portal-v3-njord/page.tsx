@@ -276,7 +276,7 @@ type CartRow =
       id: string;
       name: string;
       includesLabel: string;
-      includes: string[];
+      includes: readonly string[];
       qty: number;
     }
   | {
@@ -739,7 +739,7 @@ function PackageCard({
   name: string;
   badge: string;
   desc: string;
-  includes: string[];
+  includes: readonly string[];
   onClick: () => void;
 }) {
   return (
@@ -1327,3 +1327,4 @@ function TrustCard({ title, text }: { title: string; text: string }) {
     </div>
   );
 }
+
